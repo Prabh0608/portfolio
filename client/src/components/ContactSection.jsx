@@ -3,10 +3,6 @@ import { Card } from "@/components/ui/card";
 import { Mail, Download, Github, Linkedin, ExternalLink, Phone } from "lucide-react";
 
 export default function ContactSection({ email }) {
-  const handleDownloadResume = () => {
-    console.log("Download resume triggered");
-  };
-
   const contactMethods = [
     {
       icon: Mail,
@@ -77,16 +73,17 @@ export default function ContactSection({ email }) {
         </div>
 
         <div className="text-center">
-          <Button
-            size="lg"
-            variant="outline"
-            className="px-8"
-            onClick={handleDownloadResume}
-            data-testid="button-download-resume"
-          >
-            <Download className="mr-2 h-5 w-5" />
-            Download Resume
-          </Button>
+          <a href="../../public/Prabhjot Singh Saini.pdf" download="Prabhjot Singh Saini.pdf">
+            <Button
+              size="lg"
+              variant="outline"
+              className="px-8"
+              data-testid="button-download-resume"
+            >
+              <Download className="mr-2 h-5 w-5" />
+              Download Resume
+            </Button>
+          </a>
         </div>
       </div>
     </section>
